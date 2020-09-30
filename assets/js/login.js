@@ -34,6 +34,7 @@ $("#form_reg").on("submit", function (e) {
   $.post("/api/reguser", data, function (res) {
     // console.log(res.message);
     if (res.status !== 0) {
+      // return console.log(res);
       return layer.msg(res.message);
     }
     layer.msg("注册成功！");
